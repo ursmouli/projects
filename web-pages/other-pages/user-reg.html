@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">*First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    <small class="text-danger">First Name Error</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="middleName">Middle Name:</label>
+                    <input type="text" class="form-control" id="middleName" placeholder="Middle Name">
+                    <small class="text-danger">Middle Name Error</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="lastName">*Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    <small class="text-danger">Last Name Error</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Nick Name:</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Nick Name">
+                    <small class="text-danger">Nick Name Error</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="username">*Username:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username">
+                    <small class="text-danger">Username Error</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">*Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="mail@mail.com">
+                    <small class="text-danger">Email Error</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">*Password:</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <small class="text-danger">Password Error</small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="retypePassword">*Re-type password:</label>
+                    <input type="password" class="form-control" id="retypePassword" placeholder="Re-type password">
+                    <small class="text-danger">Re-type password Error</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dob">*DOB:</label>
+                    <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                    <small class="text-danger">DOB Error</small>
+                </div>
+                <div class="col-md-6">
+                    <label class="radio control-label">*Gender</label>
+                    <br/>
+                    <div class="border rounded">
+                    <div class="form-check form-check-inline" style="padding: 6px;">
+                        <input class="form-check-input" type="radio" id="male" name="gender" value="Male">
+                        <label class="form-check-label" for="male">Male</label>
+                        <span>&nbsp;</span>
+                        <input class="form-check-input" type="radio" id="female" name="gender" value="Female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="address1">*Address1:</label>
+                    <input type="text" class="form-control" id="address1" placeholder="House Nos., Street Name, Land mark">
+                    <small class="text-danger">Address1 Errors</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="address1">*Address2:</label>
+                    <input type="text" class="form-control" id="address2" placeholder="Taluk, District">
+                    <small class="text-danger">Address2 Errors</small>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pincode">*Pincode:</label>
+                    <input type="number" class="form-control" id="pincode" placeholder="Pincode">
+                    <small class="text-danger">Pincode Errors</small>
+                </div>
+            </div>
+            <div class="form-row">
+                <!-- city -->
+                <div class="form-group col-md-4">
+                    <label for="country">*Country:</label>
+                    <select class="form-control" id="country">
+                        <option>India</option>
+                        <option>Malaysia</option>
+                        <option>China</option>
+                    </select>
+                    <small class="text-danger">Country Error</small>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="state">*State:</label>
+                    <input type="text" class="form-control" id="state" placeholder="State">
+                    <small class="text-danger">State Error</small>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="district">*Disctict:</label>
+                    <input type="text" class="form-control" id="district" placeholder="District">
+                    <small class="text-danger">District Error</small>
+                </div>
+                <!-- country -->
+            </div>
+            
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

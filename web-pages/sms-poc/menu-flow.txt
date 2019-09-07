@@ -1,0 +1,166 @@
+Settings
+	- Institution Details
+	- Academic Details
+	- Student Import
+	- Employee Import
+	- Applicant List
+	- Employee Application
+	- Cast And Religion
+	- Visitors List
+Academic
+	- Course & Batch
+        - Course
+        - Batch
+        - Class teacher Allocation
+    - Subjects
+        - Subjects
+        - Assign Subjects
+        - Subject Allocation
+        - Elective Subject
+        - Subject Allocation Import
+    - Lesson Planning
+        - Lesson Planning
+    - Time 
+        - Set Time Table
+        - Active Timetable
+        - View Batch Timetable
+        - View Teacher Timetable
+        - Search Proxy
+        - Teacher Working Hours
+        - Time Table Export
+        - Time Table Import
+    - Exams
+        - GPA
+            - Set Term
+            - Create Exam
+            - GPA Skill
+            - GPA Skill Mark
+            - GPA Grade System
+                - GPA Gradeset
+                - Set Grade Scale
+                - Gradeset Mapping
+            - Subect Credit Point
+            - Total mark %
+            - set Assesment
+            - Set Exam
+            - Set Mark List
+            - Teacher Score Card
+            - Report Card Settings
+            - Broad Sheet
+            - Generate Report Card
+            - Assesment Mark Import
+            - GPA Mark Import
+            - Remarks Import
+        - CCE
+            - Initial Settings
+                - CCE Category
+                - CCE Assesment Terms
+                - CCE Assesment
+                - CCE Subject Sub
+                - CCE Skills
+                - CCE Grade Set
+                - CCE Grades
+                - CCE Grade Skill Mapping
+                - CCE Report Card Settings
+                - CCE Grade Description Class 1-5
+            - CCE Exam
+                - CCE Exam Scheme
+                - CCE Set Exam
+                - CCE Scholoastic Mark List
+                - CCE Co-Scholoastic Mark List
+                - Broad Sheet
+                - Generate Report Card
+                - Cce Mark Import
+                - Remarks Import
+        - Exam Hall
+            - Exam Hall
+            - Hall Arrangement
+            - Invigilation Duties
+        - Online Exam
+            - New Online Exam
+            - View Exam Details
+            - Evaluate Exam
+            - View Exam Result
+        - Unit Test
+        - Settings
+    - Assignments & Notes
+        - Add Assignment
+        - Add Notes
+        - Assignment Import
+    - Certifications
+        - Certicate Type
+        - Custom Certificate
+        - Generate Certificate
+    - Placements
+        - Placement Cell Members
+        - Placement Vendors
+        - Attendess
+        - Placed Details
+    - Occurence
+        - Occurence Register
+    - Circular
+        - Circular
+HR/Payroll
+    - Employee Management
+        - Add User Type
+        - Add Department
+        - Add Designation
+        - Add Employee
+        - Employee List
+        - Add Bank Details
+        - Print List
+        - Employee Attendance Import
+    - Payroll
+        - Pay Head
+        - Payment Types
+        - Salary Settings
+        - Employee Salary
+        - Generate Pay Slip
+        - Salary Statement
+    - Leave Management
+        - Leave Category
+        - Leave Details
+        - Leave Application
+        - Leave Approvals
+        - OD Approvals
+    - Attendance
+Student
+    - Student Category
+    - Student Admission
+    - Student List
+    - Attendance
+    - Print List
+    - Gaurdian List
+    - Roll Number
+    - Student Attendance Import
+    - Student Gate Pass
+    - Student ID Card
+Finance
+    - Fee
+        - Fee Category
+        - Fee Sub Category
+        - Fee Sub Category Fine
+        - Fee Wavier
+        - Fee Template
+        - Fee Allocation
+        - Fee Collection
+        - Quick Payment
+        - Reports
+        - Fees Allocation Import
+        - Fees Collection Import
+    - Accounting
+        - Account Group
+        - Voucher Master
+        - Voucher Head
+        - Create Voucher
+Library
+Transport
+Hostel
+Messages/SMS
+Store Management
+Performance
+Events
+Integration
+Task Manager
+Reports
+Data Export

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-client_id" content="965005538313-plg9t3ifnmooj57tgh6106h1mh1uovr1.apps.googleusercontent.com">
+        <link rel="stylesheet" type="text/css" href="/assets/1d179a7/css/styles.css" />
+<script type="text/javascript" src="/assets/9f14d2be/jquery.js"></script>
+<script type="text/javascript" src="/assets/1d179a7/js/Chart.js"></script>
+<title>Login</title>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <!-- Global stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+        <link href="/css/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+        <link href="/css/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="/css/assets/css/core.css" rel="stylesheet" type="text/css">
+        <link href="/css/assets/css/components.css" rel="stylesheet" type="text/css">
+        <link href="/css/assets/css/colors.css" rel="stylesheet" type="text/css">
+        <!-- /global stylesheets -->
+
+        <!-- Core JS files -->
+        <script type="text/javascript" src="/css/assets/js/plugins/loaders/pace.min.js"></script>
+        <script type="text/javascript" src="/css/assets/js/core/libraries/jquery.min.js"></script>
+        <script type="text/javascript" src="/css/assets/js/core/libraries/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/css/assets/js/plugins/loaders/blockui.min.js"></script>
+        <!-- /core JS files -->
+
+
+        <!-- Theme JS files -->
+        <script type="text/javascript" src="/css/assets/js/core/app.js"></script>
+        <!-- /theme JS files -->
+                <style>
+
+            #background {
+                            }
+        </style>
+
+    </head>
+
+    <body class="login-container" id="background">
+
+        <!-- Main navbar -->
+        <div class="navbar navbar-inverse" style="background-color: ">
+            <div class="navbar-header">
+                &nbsp;&nbsp;&nbsp; <a  href="#"><img src="/banner/" alt="" width=""></a>
+                <ul class="nav navbar-nav pull-right visible-xs-block">
+                    <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-mobile">
+                <ul class="nav navbar-nav navbar-right">
+                    <br>
+                   <!--<li><a href="/index.php/user/logout">School Management software</a></li>-->
+                    <li style="background-color: rgb(170,4,6); font-size: 18px;"><a href="/index.php/user/login/loginguest"><b>&nbsp;&nbsp;Admission</b></a></li>
+                    <li>&nbsp;&nbsp;</li> <li style="background-color: rgb(170,4,6); font-size: 18px;"><a href="/index.php/user/login/loginguest1"><b>&nbsp;&nbsp;Visitors</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /main navbar -->
+
+
+        <!-- Page container -->
+        <div class="page-container">
+
+            <!-- Page content -->
+            <div class="page-content">
+
+                <!-- Main content -->
+                <div class="content-wrapper">
+
+                    <!-- Content area -->
+                    <div class="content">
+
+                        <!-- Simple login form -->
+                        
+		<form action="/index.php/user/login" method="post"><div class="panel panel-body login-form" style="opacity: ">
+    <div class="text-center">
+        <div><img src="/banner/" alt="" width=""></div>
+        <h5 class="content-group">Log In            <small class="display-block">Enter your credentials below</small></h5>
+    </div>
+
+    <div class="form-group has-feedback has-feedback-left">
+                <input class="form-control input-lg" placeholder="Username" name="UserLogin[username]" id="UserLogin_username" type="text" />        <div class="form-control-feedback">
+            <i class="icon-user text-muted"></i>
+        </div>
+    </div>
+
+    <div class="form-group has-feedback has-feedback-left">
+                <input class="form-control input-lg" placeholder="Password" name="UserLogin[password]" id="UserLogin_password" type="password" />        <div class="form-control-feedback">
+            <i class="icon-lock2 text-muted"></i>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input class="btn btn-primary btn-block btn-lg" type="submit" name="yt0" value="Sign in " />    </div><div></div>
+
+    
+    <br>
+
+    <div class="text-danger"></div>
+</div>
+</form><script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+        var email = profile.getEmail();
+        $.ajax({
+            type: "POST",
+            url: "login/loginwithgmail",
+            data: {emailid: email},
+            dataType: "html",
+            success: function (data) {
+                if (data === "failed") {
+                    var auth2 = gapi.auth2.getAuthInstance();
+                    auth2.signOut().then(function () {
+                        console.log('User signed out.');
+                    });
+                    alert('Invalid Username Or Password');
+                } else {
+                    location.reload();
+
+                }
+            }
+        });
+    }
+
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+    function onSuccess(googleUser) {
+        console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+        console.log(error);
+    }
+    function renderButton() {
+        gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 280,
+            'height': 37,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSignIn,
+            'onfailure': onFailure
+        });
+    }
+</script>	
+
+		
+                        <!-- /simple login form -->
+
+
+                        <!-- Footer -->
+                        <div class="footer text-muted text-center">
+                            &copy; 2018. <a href="https://web-school.in/">Powered by Web-School ERP</a>
+                        </div>
+                        <!-- /footer -->
+
+                    </div>
+                    <!-- /content area -->
+
+                </div>
+                <!-- /main content -->
+
+            </div>
+            <!-- /page content -->
+
+        </div>
+        <!-- /page container -->
+
+    </body>
+</html>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
